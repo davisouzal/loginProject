@@ -2,7 +2,11 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 require('dotenv').config()
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
+// DB_USER = dsl
+// DB_PASSWORD = d9erlyeuKmEwhF7G
 
 
 //JSON
@@ -14,8 +18,10 @@ app.use(
 app.use(express.json())
 
 const personRoutes = require('./routes/personRoutes')
-
 app.use('/person', personRoutes)
+
+const authRoutes = require('./routes/authRoutes')
+app.use('/auth', authRoutes)
 
 //Rotas
 app.get('/', (req, res) => {
