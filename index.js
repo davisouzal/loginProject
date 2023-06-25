@@ -17,11 +17,17 @@ app.use(
 )
 app.use(express.json())
 
-const personRoutes = require('./routes/personRoutes')
+//Rotas de pessoas do CRUD
+const personRoutes = require('./routes/personRoutes.js')
 app.use('/person', personRoutes)
 
-const authRoutes = require('./routes/authRoutes')
+//Rotas de autenticação de usuário
+const authRoutes = require('./routes/authRoutes.js')
 app.use('/auth', authRoutes)
+
+//Rotas de usuários logados
+const userRoutes = require('./routes/userRoutes.js')
+app.use('/user', userRoutes)
 
 //Rotas
 app.get('/', (req, res) => {
@@ -30,7 +36,6 @@ app.get('/', (req, res) => {
 
 })
 
-//entregar uma porta
 const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASSWORD
 
@@ -45,4 +50,6 @@ mongoose.connect(
     })
 })
 .catch((err) => console.log(err))
+
+
 
