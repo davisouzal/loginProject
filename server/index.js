@@ -1,9 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const app = express()
 require('dotenv').config()
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
 
 // DB_USER = dsl
 // DB_PASSWORD = d9erlyeuKmEwhF7G
@@ -16,6 +15,8 @@ app.use(
     }),
 )
 app.use(express.json())
+
+app.use(cors)
 
 //Rotas de pessoas do CRUD
 const personRoutes = require('./routes/personRoutes.js')
