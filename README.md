@@ -38,6 +38,21 @@ $ npm i
 ```
 ---
 
+### Deploy da aplicação
+Já para rodar a aplicação é importante salientar a necessidade de rodar o back e o front ao mesmo tempo com o seguintes comandos:
+
+```bash
+
+# Na pasta do server rodar
+$ npm start
+
+# Na pasta do front rodar
+$ npm start
+
+```
+
+---
+
 
 Feito  por Davi Souza 👋🏽 [](https://www.linkedin.com/in/davisouzalima/)
 
