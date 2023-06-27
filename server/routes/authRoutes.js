@@ -18,6 +18,7 @@ router.post('/register', async (req, res) => {
     if(!password){
         return res.status(422).json({ message: "A senha é obrigatória "})
     }
+
     
     if(password !== confirmPassword){
         return res.status(422).json({ message: "As senhas não conferem! "})

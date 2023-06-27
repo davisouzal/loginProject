@@ -16,7 +16,7 @@ app.use(
 )
 app.use(express.json())
 
-app.use(cors)
+//app.use(cors)
 
 //Rotas de pessoas do CRUD
 const personRoutes = require('./routes/personRoutes.js')

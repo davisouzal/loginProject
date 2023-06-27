@@ -3,7 +3,9 @@ import Login from './components/Login'
 
 function App() {
   return (
-    <Login />
+    <main className='App'>
+      <Login />
+    </main>
   );
 }
 
